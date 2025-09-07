@@ -12,7 +12,7 @@ export const PeoplePage = () => {
   const [isError, setIsError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [searchParams] = useSearchParams();
-  const query = searchParams.get('query')?.toLowerCase() || '';
+  const query = searchParams.get('query')?.trim().toLowerCase() || '';
   const sex = searchParams.get('sex') || '';
   const centuries = searchParams.getAll('centuries') || [];
 

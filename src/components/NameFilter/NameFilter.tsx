@@ -4,8 +4,6 @@ type Props = {
 };
 
 export const NameFilter: React.FC<Props> = ({ query, handleQueryChange }) => {
-  const normalizedQuery = query.trim().toLowerCase();
-
   return (
     <div className="panel-block">
       <p className="control has-icons-left">
@@ -14,7 +12,7 @@ export const NameFilter: React.FC<Props> = ({ query, handleQueryChange }) => {
           type="search"
           className="input"
           placeholder="Search"
-          value={normalizedQuery}
+          value={query}
           onChange={handleQueryChange}
         />
 
